@@ -1,0 +1,12 @@
+{
+  "_comment": "[신규 공개용 synthetic example] 실제 Firebase dump가 아닙니다. 실제 환자 데이터가 아니며, 실제 의학적으로 유효한 약물 상호작용 정보를 담고 있지 않습니다. AlarmList.java 코드에서 확인되는 'drugInteractions' 노드의 구조(약물명 -> 위험 조합 성분 목록)만을 보여주기 위한 synthetic placeholder입니다. 자신의 Firebase Realtime Database에 이 구조를 참고하여 실제 검증된 의약품 상호작용 데이터를 직접 구성해야 합니다.",
+  "drugInteractions": {
+    "sample_drug_a": {
+      "combo_1": "SAMPLE_INGREDIENT_B",
+      "combo_2": "SAMPLE_INGREDIENT_C"
+    },
+    "sample_drug_b": {
+      "combo_1": "SAMPLE_INGREDIENT_A"
+    }
+  }
+}

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmSetting">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#3F51B5"
+        android:backgroundTint="#3F51B5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Alarm Setting"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#3F51B5"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <LinearLayout
+            android:id="@+id/layoutAlarmAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/timePickerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- 🕒 시간 선택 타임피커 추가 -->
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    android:layout_width="374dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="0dp"
+                    android:numbersBackgroundColor="#000000"
+                    android:numbersSelectorColor="#000000"
+                    android:theme="@style/TimePickerStyle"
+                    android:timePickerMode="spinner" />
+
+                <TimePicker
+                    android:id="@+id/timePicker2"
+                    android:layout_width="374dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="0dp"
+                    android:visibility="gone"
+                    android:numbersBackgroundColor="#000000"
+                    android:numbersSelectorColor="#000000"
+                    android:theme="@style/TimePickerStyle"
+                    android:timePickerMode="spinner" />
+
+                <TimePicker
+                    android:id="@+id/timePicker3"
+                    android:layout_width="374dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="0dp"
+                    android:visibility="gone"
+                    android:numbersBackgroundColor="#000000"
+                    android:numbersSelectorColor="#000000"
+                    android:theme="@style/TimePickerStyle"
+                    android:timePickerMode="spinner" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonAddTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#3F51B5"
+                android:text="시간 추가"
+                android:textColor="#FFFFFF" />
+
+            <!-- 알람 이름 입력 -->
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="20dp"
+                android:background="#828282"
+                android:backgroundTint="#828282"
+                android:text="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="약 이름"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextAlarmName"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="약 이름을 입력"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="약 성분"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextMedIn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="약 성분을 입력"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- 반복 유형 선택 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="154dp"
+                    android:layout_height="wrap_content"
+                    android:text="반복 유형"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupRepeatType"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioWeekly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="요일 반복"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/radioInterval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주기 반복"
+                        android:textColor="#000000" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Material Button으로 요일 반복 설정 -->
+            <LinearLayout
+                android:id="@+id/layoutWeekly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleGroupDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:selectionRequired="false"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMon"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:checkable="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="월"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnTue"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:checkable="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="화"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnWed"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:checkable="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="수"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnThu"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:checkable="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="목"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFri"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:checkable="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="금"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSat"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:checkable="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="토"
+                        android:textColor="#E91E63"
+                        android:textSize="16sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSun"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:checkable="true"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="일"
+                        android:textColor="#F44336"
+                        android:textSize="16sp" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+
+            <!-- 주기 반복 설정 (기본 숨김) -->
+            <LinearLayout
+                android:id="@+id/layoutInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주기 반복 설정:" />
+
+                <EditText
+                    android:id="@+id/editTextIntervalDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="반복 주기 입력 (일)"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <!-- 저장 버튼 -->
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="101dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4CAF50"
+                android:text="저장"
+                android:textColor="#FFFFFF" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

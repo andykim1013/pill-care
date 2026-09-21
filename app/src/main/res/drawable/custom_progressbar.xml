@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="#E0E0E0"/>
+            <size android:height="40dp"/> <!-- 여기서 높이 지정 -->
+        </shape>
+    </item>
+
+    <!-- 진행된 부분 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="10dp" />
+                <solid android:color="#4CAF50"/>
+                <size android:height="40dp"/> <!-- 여기도 동일하게 높이 지정 -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

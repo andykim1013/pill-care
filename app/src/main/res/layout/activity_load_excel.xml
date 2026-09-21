@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".LoadExcel">
+
+    <LinearLayout android:id="@+id/linearLayout4" android:layout_width="414dp" android:layout_height="60dp" android:background="#3F51B5" android:backgroundTint="#3F51B5" android:gravity="center" android:orientation="horizontal" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="처방데이터 불러오기"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="0dp" android:layout_height="0dp" android:fillViewport="true" app:layout_constraintBottom_toTopOf="@+id/linearLayout5" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView android:id="@+id/tV3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="1.사이트 안내를 따라 \n처방데이터를 불러오세요"
+                android:textColor="#000000"
+                android:textSize="25sp"/>
+
+            <!--  첫 번째 이미지  -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_marginTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_marginBottom="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pic_medadd" />
+            <!--  복용자료 조회하기 버튼  -->
+            <!--  2번 설명 텍스트  -->
+            <Button
+                android:id="@+id/btn_web"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#388E3C"
+                android:padding="16dp"
+                android:text="사이트 접속하기"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="411dp"
+                android:layout_height="2dp"
+                android:background="#838383"
+                android:backgroundTint="#828282"
+                android:layout_marginTop="30dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="2.다운받은 처방데이터를 \n 아래 버튼으로 추가하세요"
+                android:textColor="#000000"
+                android:textSize="25sp"/>
+            <!--  두 번째 이미지  -->
+            <!--  다음 버튼  -->
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#00796B"
+                android:padding="16dp"
+                android:text="처방데이터 불러오기"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@+id/linearLayout5" android:layout_width="414dp" android:layout_height="60dp" android:background="#3F51B5" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
